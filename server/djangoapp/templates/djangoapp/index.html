@@ -19,6 +19,9 @@
             <div class="navbar-header">
                   <a class="navbar-brand" href="{% url 'djangoapp:about' %}">Cars Dealership</a>
             </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'djangoapp:contact' %}">Contact Us</a>
+            </div>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
                 <li>
