@@ -62,13 +62,13 @@
                                 <img class="card-img-left" src="{{MEDIA_URL}}/emoji/neutral.png" width="36px" height="36px"
                                            alt="Sentiment">
                             {% endif %}
-                            <div class="card-body bg-light">
-                                      {% if review.car_make%}
-                                          <h5 class="card-title">{{review.car_make}}, {{review.car_model}} </h5>
-                                          <h5 class="card-title">{{review.car_year}}</h5>
-                                       {% endif %}
-                                      <p class="card-text">{{review.review}}</p>
-                            </div>
+                                <div class="card-body bg-light">
+                                    {% if review.car_make%}
+                                        <h5 class="card-title">{{review.car_make}}, {{review.car_model}}</h5>
+                                        <h5 class="card-title">{{review.car_year}}</h5>
+                                    {% endif %}
+                                        <p class="card-text">{{review.review}}</p>
+                                </div>
                         </div>
                     </div>
                     {% endfor %}
