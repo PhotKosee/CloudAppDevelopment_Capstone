@@ -84,9 +84,6 @@ class DealerReview:
         self.review = review
         # Optional attributes
         self.purchase_date = ""
-        self.purchase_make = ""
-        self.purchase_model = ""
-        self.purchase_year = ""
         self.sentiment = ""
         self.id = ""
 

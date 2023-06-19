@@ -113,8 +113,6 @@ def add_review(request, id):
             username = request.user.username
             print(request.POST)
             payload = dict()
-            car_id = request.POST["car"]
-            car = CarModel.objects.get(pk=car_id)
             payload["time"] = datetime.utcnow().isoformat()
             payload["name"] = username
             payload["dealership"] = id
@@ -125,7 +123,6 @@ def add_review(request, id):
                 if request.POST["purchasecheck"] == 'on':
                     payload["purchase"] = True
             payload["purchase_date"] = request.POST["purchasedate"]           
-            payload["car_model"] = car.name
             new_payload = {}
             new_payload["review"] = payload
             review_post_url = "https://us-south.functions.appdomain.cloud/api/v1/web/23053c23-8a47-4c4f-942e-fced897fa2fd/dealership-package/post-review"
